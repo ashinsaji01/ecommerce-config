@@ -8,8 +8,8 @@ spring:
       database: ${DB_DATABASE:notification}
       authentication-database: ${DB_AUTH_DATABASE:admin}
   kafka:
+    bootstrap-servers: ${KAFKA_URL:localhost:19092}
     consumer:
-      bootstrap-servers: ${KAFKA_URL:localhost:19092}
       group-id: paymentGroup, orderGroup
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
