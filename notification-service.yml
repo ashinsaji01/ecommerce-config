@@ -9,7 +9,7 @@ spring:
       authentication-database: ${DB_AUTH_DATABASE:admin}
   kafka:
     consumer:
-      bootstrap-servers: ${KAFKA_URL:localhost:9092}
+      bootstrap-servers: ${KAFKA_URL:localhost:19092}
       group-id: paymentGroup, orderGroup
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
