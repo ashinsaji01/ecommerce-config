@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${DB_URL:localhost:5432/order}
+    username: ${DB_USERNAME:ashin}
+    password: ${DB_PASSWORD:ashin}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  kafka:
+    producer:
+      bootstrap-servers: ${KAFKA_URL:localhost:19092}
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.type.mapping: orderConfirmation:com.ashinsaji.projects.ecommerce.kafka.OrderConfirmation
+
+server:
+  port: ${SERVER_PORT:8070}
