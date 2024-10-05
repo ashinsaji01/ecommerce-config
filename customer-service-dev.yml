@@ -1,11 +1,11 @@
 spring:
   data:
     mongodb:
-      username: ${DB_USERNAME:ashin}
-      password: ${DB_PASSWORD:ashin}
-      host: ${DB_HOST:localhost}
-      port: ${DB_PORT:27017}
-      database: ${DB_DATABASE:customer}
-      authentication-database: ${DB_AUTH_DATABASE:admin}
+      username: ashin
+      password: ashin
+      host: localhost
+      port: 27017
+      database: customer
+      authentication-database: admin
 server:
-  port: ${SERVER_PORT:8090}
+  port: 8090
