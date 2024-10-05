@@ -1,14 +1,14 @@
 spring:
   data:
     mongodb:
-      username: ${DB_USERNAME:ashin}
-      password: ${DB_PASSWORD:ashin}
-      host: ${DB_HOST:localhost}
-      port: ${DB_PORT:27018}
-      database: ${DB_DATABASE:notification}
-      authentication-database: ${DB_AUTH_DATABASE:admin}
+      username: ashin
+      password: ashin
+      host: localhost
+      port: 27018
+      database: notification
+      authentication-database: admin
   kafka:
-    bootstrap-servers: ${KAFKA_URL:localhost:19092}
+    bootstrap-servers: localhost:19092
     consumer:
       group-id: paymentGroup, orderGroup
       auto-offset-reset: earliest
@@ -18,10 +18,10 @@ spring:
         spring.json.trusted.packages: '*'
         spring.json.type.mapping: orderConfirmation:com.ashinsaji.projects.ecommerce.kafka.order.OrderConfirmation, paymentConfirmation:com.ashinsaji.projects.ecommerce.kafka.payment.PaymentConfirmation
   mail:
-    host: ${MAIL_HOST:localhost}
-    port: ${MAIL_PORT:1025}
-    username: ${MAIL_USERNAME:ashin}
-    password: ${MAIL_PASSWORD:ashin}
+    host: localhost
+    port: 1025
+    username: ashin
+    password: ashin
     properties:
       mail:
         smtp:
@@ -34,4 +34,4 @@ spring:
         writetimeout: 5000
 
 server:
-  port: ${SERVER_PORT:8040}
+  port: 8040
